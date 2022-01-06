@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <link rel="stylesheet" href="/assets/result.css">
+  <meta charset="UTF-8" />
+  <body>
+    <div class="center">
+      <% if(block) { %>
+      <p>
+        Product is registered<br>
+        Product id: <%= block.data.pid %><br>
+        Product name: <%= block.data.pname %>
+      </p>
+      <% } else { %>
+        <p> Product not registered</p>
+        <%}%>
+    </div>
+
+  </body>
+
+</head>
+</html>
