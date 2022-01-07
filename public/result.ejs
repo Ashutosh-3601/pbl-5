@@ -4,16 +4,24 @@
   <link rel="stylesheet" href="/assets/result.css">
   <meta charset="UTF-8" />
   <body>
-    <div class="center">
-      <% if(block) { %>
-      <p>
-        Product is registered<br>
-        Product id: <%= block.data.pid %><br>
-        Product name: <%= block.data.pname %>
-      </p>
-      <% } else { %>
-        <p> Product not registered</p>
-        <%}%>
+    <div class="main">
+      <div class="card">
+        <% if(block) { %>
+        <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/313/check-mark_2714-fe0f.png" alt="Avatar">
+        <div class="container">
+          <h4><b>Product is registered</b></h4>
+          <p>Company Name: <span><%= block.data.company_name %></span></p>
+          <p>Product id: <span><%= block.data.product_id %></span></p>
+          <p>Product name: <span><%= block.data.product_name %></span></p>
+          <p>Manufactured At: <span><%= block.data.location %></span></p>
+        </div>
+        <% } else { %>
+          <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/google/313/cross-mark_274c.png" alt="Avatar">
+          <div class="container">
+            <h4><b>Product is not registered</b></h4>
+          </div>
+          <%}%>
+      </div>
     </div>
 
   </body>

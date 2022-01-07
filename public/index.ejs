@@ -14,43 +14,39 @@
 </div>
     <div class="title">Generate QR Code</div>
     <div class="content">
-      <form action="/generate" method="post" autocomplete="on" id="qrform">
+      <form action="/generate" method="post" id="qrform">
         <div class="user-details">
           <div class="input-box">
-            <label for="coid" class="details">Company ID</label>
+            <label for="company_id" class="details">Company ID</label>
             <!-- <input type="text" placeholder="Enter company ID" required> -->
             <!-- <label for ="CID" class="details">Company ID</label> -->
             <!-- yo  iske neeche tereko sare option dalna padega....db se integra-->
-            <select id="coid" name="coid" class="Cid">
+            <select id="company_id" name="company_id" class="Cid">
               <option value="" selected disabled hidden>Enter company ID</option>
-              <!--<option value="1">CR234M55</option>
-              <option value="2">C91209G4</option>
-              <option value="3">IFLD1012</option>
-              <option value="4">LILY39K2</option>-->
               <% for(const c of companies) { %>
-              <option value=<%= c.name %>><%= c.id + " - " + c.name%></option>
+              <option value="<%= c.name %>"><%= c.id %></option>
               <%}%>
             </select>
           </div>
 
           <div class="input-box">
-            <label for="cname" class="details">Company Name</label>
-            <input id="cname" type="text" name="cname" placeholder="Enter company name" disabled>
+            <label for="company_name" class="details">Company Name</label>
+            <input id="company_name" type="text" name="company_name" placeholder="Enter company name" readonly>
           </div>
 
           <div class="input-box">
-            <label for="pname" class="details">Product name</label>
-            <input id="pname" type="text" name="pname" placeholder="Enter the product name" required>
+            <label for="product_name" class="details">Product name</label>
+            <input id="product_name" type="text" name="product_name" placeholder="Enter the product name" required>
           </div>
 
           <div class="input-box">
-            <label for="pid" class="details">Product ID</label>
-            <input id="pid" type="text" name="pid" autocomplete="off" placeholder="Enter Product ID" required>
+            <label for="product_id" class="details">Product ID</label>
+            <input id="product_id" type="text" name="product_id" autocomplete="off" placeholder="Enter Product ID" required>
           </div>
 
           <div class="input-box" class="loc">
-            <label for="loca" class="details">Product Location</label>
-            <input id="loca" type="text" name="ploc" placeholder="Enter the product Location" required>
+            <label for="location" class="details">Product Location</label>
+            <input id="location" type="text" name="location" placeholder="Enter the product Location" required>
 
 
         </div>
@@ -64,8 +60,8 @@
 
 </body>
 <script>
-var mytextbox = document.getElementById('cname');
-var mydropdown = document.getElementById('coid');
+var mytextbox = document.getElementById('company_name');
+var mydropdown = document.getElementById('company_id');
 var submitbtn = document.getElementById('submitbtn');
 var fdbk = document.getElementById('feedback');
 var frm = document.getElementById('qrform');

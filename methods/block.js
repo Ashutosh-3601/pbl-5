@@ -2,7 +2,7 @@ const SHA256 = require('crypto-js/sha256');
 const { uid } = require('./util.js');
 
 class Block {
-   constructor(index, data, prevHash = '0', difficulty=2, nonce = 0) {
+   constructor(index, data, prevHash = '0', difficulty = 2, nonce = 0) {
        this.index = index;
        this.timestamp = Math.floor(Date.now() / 1000);
        this.data = { ...data, identifier: uid() };

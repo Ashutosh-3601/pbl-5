@@ -20,7 +20,7 @@ body{
   margin-top: 8px;
   margin-bottom: 8px;
   padding: 20px;
-  background-color: #03fcad; /* Red */
+  background-color: #03fcad;
   color: white;
   margin-bottom: 15px;
   display: none;
@@ -94,7 +94,7 @@ form .user-details .input-box{
   padding-left: 15px;
   border: 1px solid #ccc;
   border-bottom-width: 2px;
-  tralabelion: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .loc{
